@@ -1,0 +1,19 @@
+# fly.toml file generated for yellow-bull on 2022-09-19T14:47:42+08:00
+
+app = "yellow-bull"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+  image = "yoyo860224/yellow-bull:latest"
+
+[env]
+  TG_TOKEN = "TBD"
+  TG_CHAT_ID = "TBD"
+  YB_TRACK_INT = "10"
+  YB_BRANDS = "Sony,Fujifilm"
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
