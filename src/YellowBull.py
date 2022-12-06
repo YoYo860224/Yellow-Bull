@@ -10,11 +10,11 @@ import telegram
 from bs4 import BeautifulSoup
 
 # Log setting
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(name)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(name)s - %(message)s")
 
 logger = logging.getLogger()
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
-fh = logging.FileHandler('log.txt', 'w', 'utf-8')
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(name)s - %(message)s")
+fh = logging.FileHandler("log.txt", "w", "utf-8")
 fh.setLevel(logging.INFO)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
@@ -54,7 +54,7 @@ def main():
         botToken = os.getenv("TG_TOKEN")
         myChatID = os.getenv("TG_CHAT_ID")
         trackInt = int(os.getenv("YB_TRACK_INT"))
-        brands = os.getenv("YB_BRANDS").split(',')
+        brands = os.getenv("YB_BRANDS").split(",")
 
     # Open bot.
     bot = telegram.Bot(botToken)
